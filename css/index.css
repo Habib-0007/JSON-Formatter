@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand");
+
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	font-family: "Quicksand", sans-serif;
+}
+
+:root {
+	--bg: hsl(240, 5.2%, 33.9%);
+	--semi-bg: hsl(240, 3.8%, 46.1%);
+	--text-col: hsl(240, 5%, 64.9%);
+	--btn-col: hsl(330, 81.2%, 60.4%);
+	--btn-hov-col: hsl(335, 77.6%, 42%);
+}
+
+main {
+	background: var(--bg);
+	min-height: 100svh;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-block: 20px;
+}
+
+header h1 {
+	font-size: 1.6em;
+	color: #fff;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+	padding: 10px;
+	height: 80vh;
+}
+
+textarea {
+	background: var(--semi-bg);
+	color: var(--text-col);
+	width: 100%;
+	height: 100%;
+	padding: 12px;
+	font-size: 1.2em;
+	font-weight: bold;
+	resize: none;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 12px;
+	width: 100%;
+}
+
+.buttons button {
+	background: var(--btn-col);
+	color: #fff;
+	padding: 8px 14px;
+	font-size: 1.2em;
+	border-radius: 6px;
+	font-weight: bold;
+}
+
+.buttons button:active {
+	background: var(--btn-hov-col);
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 1.5em;
+	padding-block: 20px;
+}
+
+footer > li {
+	list-style: none;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer li > a {
+	color: var(--btn-col);
+	font-size: 1.8em;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr 100px 1fr;
+		height: 80vh;
+		padding: 20px;
+	}
+
+	.wrapper textarea {
+		height: 100%;
+	}
+	
+	.buttons {
+	  flex-direction: column;
+	}
+}
