@@ -2,6 +2,8 @@ let inputBox = document.querySelector(".input");
 let outputBox = document.querySelector(".output");
 let fornatBtn = document.querySelector(".buttons .format-btn");
 let minifyBtn = document.querySelector(".buttons .minify-btn");
+let clearBtn = document.querySelector(".wrapper i.fa-trash");
+let clipboardBtn = document.querySelector(".wrapper i.fa-clipboard");
 
 fornatBtn.addEventListener("click", () => {
 	try {
@@ -21,4 +23,19 @@ minifyBtn.addEventListener("click", () => {
 	} catch (err) {
 		outputBox.value = err.message;
 	}
+});
+
+clearBtn.addEventListener("click", () => {
+	inputBox.value = "";
+});
+
+clipboardBtn.addEventListener("click", () => {
+	navigator.clipboard
+		.writeText(outputBox.value)
+		.then(() => {
+			alert("Text successfully copied to clipboard");
+		})
+		.catch(err => {
+			alert("Unable to copy text to clipboard", err);
+		});
 });

@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
 			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css"
-	/>
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
 
 		<link rel="stylesheet" href="css/index.css" />
 		<script src="js/index.js" defer></script>
@@ -18,34 +18,47 @@
 				<h1>JSON Formatter</h1>
 			</header>
 			<section class="wrapper">
-				<textarea class="input"></textarea>
+				<div>
+					<textarea
+						class="input"
+						placeholder="Enter your JSON code here..."
+					></textarea>
+					<i class="fa fa-trash"></i>
+				</div>
 				<div class="buttons">
 					<button type="button" class="format-btn">Format</button>
 					<button type="button" class="minify-btn">Minify</button>
 				</div>
-				<textarea class="output" readonly></textarea>
+				<div>
+					<textarea
+						class="output"
+						placeholder="The JSON output will appear here"
+						readonly
+					></textarea>
+					<i class="far fa-clipboard"></i>
+				</div>
 			</section>
 			<footer>
 				<li>
 					<a href="https://www.facebook.com/habibopeyemi.adebayo">
-						<i class="fa fa-facebook"></i>
+						<i class="fab fa-facebook"></i>
 					</a>
 				</li>
 
 				<li>
 					<a href="https://twitter.com/Habib__001">
-						<i class="fa fa-twitter"></i>
+						<i class="fab fa-twitter"></i>
 					</a>
 				</li>
 
 				<li>
 					<a href="https://www.github.com/Habib-0007">
-						<i class="fa fa-github"></i>
+						<i class="fab fa-github"></i>
 					</a>
 				</li>
 				<li>
 					<a href="https://wa.me/+2349019166356">
-						<i class="fa fa-whatsapp"></i>
+						<i class="fab fa-whatsapp"></i>
 					</a>
 				</li>
 			</footer>
