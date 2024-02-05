@@ -5,6 +5,8 @@ let minifyBtn = document.querySelector(".buttons .minify-btn");
 let clearBtn = document.querySelector(".wrapper i.fa-trash");
 let clipboardBtn = document.querySelector(".wrapper i.fa-clipboard");
 
+document.getElementById("main").style.height = `${window.innerHeight}px`;
+
 fornatBtn.addEventListener("click", () => {
 	try {
 		var formattedData = JSON.stringify(JSON.parse(inputBox.value), null, 2);
